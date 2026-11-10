@@ -22,21 +22,20 @@ export default function Home() {
         <div className="hero-proof"><span className="proof-rule" /><span>Software Development Engineer at Lumen Technologies</span></div>
       </div>
 
-      <section className="hero-workflow" aria-label="Jira engineering knowledge workflow">
-        <div className="workflow-header">
-          <div className="workflow-title"><GitBranch size={18} /><span>Jira story intelligence</span></div>
-          <div className="workflow-stack">Python · FastAPI · RAG</div>
-        </div>
-        <div className="workflow-query"><span>Engineering requirement</span><strong>Find related Jira stories</strong></div>
-        <div className="workflow-route" aria-label="Search, recommend reuse, and draft a story">
-          <div className="workflow-step"><span className="workflow-step-index">01</span><Search size={16} /><strong>Search</strong><small>Related stories</small></div>
-          <span className="workflow-connector" aria-hidden="true" />
-          <div className="workflow-step"><span className="workflow-step-index">02</span><Network size={16} /><strong>Recommend</strong><small>Reuse or create</small></div>
-          <span className="workflow-connector" aria-hidden="true" />
-          <div className="workflow-step"><span className="workflow-step-index">03</span><FilePlus2 size={16} /><strong>Draft</strong><small>Jira story</small></div>
-        </div>
-        <div className="workflow-result"><span>Outcome</span><strong>Story creation with project context</strong><p>Related work and synchronized documentation stay connected.</p></div>
-      </section>
+      <div className="hero-art" role="img" aria-label="AI connecting data, context, and action">
+        <div className="art-grid" aria-hidden="true" />
+        <div className="art-index">AI and data systems <span>01—03</span></div>
+        <div className="signal-ring ring-a" aria-hidden="true" />
+        <div className="signal-ring ring-b" aria-hidden="true" />
+        <div className="signal-ring ring-c" aria-hidden="true" />
+        <div className="signal-core"><span>AI</span><i aria-hidden="true">+</i></div>
+        <div className="signal-node node-data"><Database size={16} /><span>Data</span></div>
+        <div className="signal-node node-context"><Network size={16} /><span>Context</span></div>
+        <div className="signal-node node-action"><Braces size={16} /><span>Action</span></div>
+        <div className="flow-card flow-top"><Search size={16} /><span><b>Jira story intelligence</b><small>Search related work</small></span></div>
+        <div className="flow-card flow-bottom"><FilePlus2 size={16} /><span><b>From idea to story</b><small>Reuse or draft</small></span></div>
+        <span className="art-caption">Data <i /> Context <i /> Action</span>
+      </div>
     </section>
 
     <div className="stats" aria-label="Selected results">
