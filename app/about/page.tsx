@@ -7,5 +7,7 @@ export default function About() { return <>
   <div className="content-grid" style={{paddingBottom:80}}>
     <article className="content-card"><div className="mono">EDUCATION · JUL 2021 — JUL 2025</div><h2>Keshav Memorial Institute of Technology</h2><p>B.Tech. in Computer Science &amp; Engineering (AI &amp; ML) · CGPA 8.60 / 10 · Hyderabad, Telangana</p></article>
     <article className="content-card"><div className="mono">EDUCATION · SEP 2022 — DEC 2025</div><h2>Indian Institute of Technology Madras</h2><p>Diploma in Programming and Data Science · GPA 6.55 / 10 · Chennai, Tamil Nadu</p></article>
+    <article className="content-card"><div className="mono">EDUCATION · 2019 — 2021</div><h2>Bhashyam Junior College</h2><p>Intermediate · 95% · Andhra Pradesh Board of Intermediate Education.</p></article>
+    <article className="content-card"><div className="mono">EDUCATION · 2018 — 2019</div><h2>Bhashyam Public School</h2><p>Secondary School Certificate · GPA 9.8 / 10.</p></article>
   </div>
 </> }

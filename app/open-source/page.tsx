@@ -5,6 +5,9 @@ const projects: [string, string, string, string[]][] = [
   ['COMPUTER VISION', 'Automatic Driving Test Tracker', 'Uses YOLOv8 and OpenCV for real-time driving test evaluation, achieving 95% detection accuracy. A Flask application analyzes candidate performance and automates assessment.', ['Python', 'Flask', 'OpenCV', 'YOLOv8']],
   ['INDOOR NAVIGATION', 'Indoor Navigation for Museums', 'An interactive SVG-based navigation system that optimizes visitor routes through museums. Graph-based pathfinding and Firebase authentication support efficient, secure navigation.', ['JavaScript', 'SVG', 'Firebase', 'Data Structures']],
   ['WEB APPLICATION', 'Household Services Application', 'A role-based household services platform with separate admin and user dashboards for service requests, approvals, and search. Flask and SQLAlchemy power the backend, with SQLite, Jinja2, and responsive Bootstrap interfaces.', ['Python', 'Flask', 'SQLite', 'SQLAlchemy', 'Bootstrap']],
+  ['GAME DEVELOPMENT', 'Basic Survival Game', 'A survival game where players collect bottles and fruit while managing their health.', ['Unreal Engine']],
+  ['GAME DEVELOPMENT', 'Shooter Game', 'A C++ and Unreal Engine game in which the player character fights vampires.', ['C++', 'Unreal Engine']],
+  ['VR · AR · HEALTHCARE', 'Medical Training Simulation', 'An ongoing VR/AR training experience designed to introduce nurses to basic nursing procedures.', ['Unreal Engine', 'MERN', 'Blender']],
 ]
 
 export default function Projects() { return <>
