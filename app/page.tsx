@@ -1,61 +1,66 @@
 import Link from 'next/link'
-import { ArrowDown, ArrowRight, ArrowUpRight, Braces, Database, Network, Sparkles } from 'lucide-react'
+import { ArrowDown, ArrowRight, ArrowUpRight, Braces, Database, FilePlus2, GitBranch, Network, Search } from 'lucide-react'
 
 const projects = [
-  { n: '01', type: 'AI · MACHINE LEARNING', title: 'DataLens AI', copy: 'Automates data preparation, model training, evaluation, and visualization, with a chatbot for natural-language dataset exploration.', tags: ['Python', 'Streamlit', 'Machine Learning', 'NLP'] },
-  { n: '02', type: 'COMPUTER VISION', title: 'Automatic Driving Test Tracker', copy: 'A real-time driving test evaluation system using YOLOv8 and OpenCV, achieving 95% detection accuracy.', tags: ['Python', 'Flask', 'OpenCV', 'YOLOv8'] },
-  { n: '03', type: 'INDOOR NAVIGATION', title: 'Indoor Navigation for Museums', copy: 'Interactive SVG maps and graph-based pathfinding help visitors find efficient routes through museums.', tags: ['JavaScript', 'SVG', 'Firebase', 'Data Structures'] },
-  { n: '04', type: 'WEB APPLICATION', title: 'Household Services Application', copy: 'A role-based services platform with separate admin and user dashboards for requests, approvals, and search.', tags: ['Python', 'Flask', 'SQLite', 'SQLAlchemy', 'Bootstrap'] },
+  { n: '01', type: 'Machine learning', title: 'DataLens AI', copy: 'Prepare data, train and evaluate models, and explore datasets through an interactive visualization and natural language interface.', tags: ['Python', 'Streamlit', 'Machine learning', 'NLP'] },
+  { n: '02', type: 'Computer vision', title: 'Automatic Driving Test Tracker', copy: 'Evaluate driving tests in real time with YOLOv8 and OpenCV. The system reports 95% detection accuracy.', tags: ['Python', 'Flask', 'OpenCV', 'YOLOv8'] },
+  { n: '03', type: 'Indoor navigation', title: 'Indoor Navigation for Museums', copy: 'Help museum visitors find routes with interactive SVG maps and graph-based pathfinding.', tags: ['JavaScript', 'SVG', 'Firebase'] },
+  { n: '04', type: 'Web application', title: 'Household Services Application', copy: 'Manage service requests and approvals through separate admin and user dashboards.', tags: ['Python', 'Flask', 'SQLite', 'SQLAlchemy'] },
 ]
 
 export default function Home() {
   return <>
     <section className="hero">
       <div className="hero-copy-column">
-        <div className="hero-kicker"><i/>SOFTWARE DEVELOPMENT ENGINEER <span>·</span> AI &amp; DATA SCIENCE</div>
-        <h1>I build AI systems that make <span>work move.</span></h1>
-        <p className="hero-copy">I&apos;m Yashwanth Tirumala Sai Akhil Bhaskaruni, a Software Development Engineer focused on Generative AI, agentic systems, backend services, and data engineering.</p>
+        <div className="hero-kicker"><i />Software Development Engineer <span>·</span> AI &amp; Data Science</div>
+        <h1>I build AI and data systems for engineering teams</h1>
+        <p className="hero-copy">At Lumen Technologies, I work on engineering knowledge search, workflow automation, analytics, and data pipelines.</p>
         <div className="hero-actions">
-          <Link className="button-primary" href="/platforms">Explore selected work <ArrowRight size={16} /></Link>
-          <a className="button-secondary" href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/Yashwanth_AI_Engineer.pdf`} download>Download résumé <ArrowDown size={15}/></a>
+          <Link className="button-primary" href="/platforms">View selected work <ArrowRight size={16} /></Link>
+          <a className="button-secondary" href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/Yashwanth_AI_Engineer.pdf`} download>Download résumé <ArrowDown size={16} /></a>
         </div>
-        <div className="hero-proof"><span className="proof-mark">✳</span><span>From useful prototypes<br/>to production-minded systems</span></div>
+        <div className="hero-proof"><span className="proof-rule" /><span>Software Development Engineer at Lumen Technologies</span></div>
       </div>
-      <div className="hero-art" aria-label="A diagram showing signals becoming intelligence and then useful action">
-        <div className="art-grid"/>
-        <div className="art-index">FIELD NOTES <span>01—03</span></div>
-        <div className="signal-ring ring-a"/><div className="signal-ring ring-b"/><div className="signal-ring ring-c"/>
-        <div className="signal-core"><span>AI</span><i>+</i></div>
-        <div className="signal-node node-data"><Database size={15}/><span>DATA</span></div>
-        <div className="signal-node node-context"><Network size={15}/><span>CONTEXT</span></div>
-        <div className="signal-node node-action"><Braces size={15}/><span>ACTION</span></div>
-        <div className="flow-card flow-top"><span className="flow-icon"><Sparkles size={13}/></span><span><b>Make complexity useful</b><small>THE WORK, IN ONE LINE</small></span><ArrowUpRight size={15}/></div>
-        <div className="flow-card flow-bottom"><span className="live-dot"/><span><b>Systems thinking</b><small>AI · DATA · ENGINEERING</small></span><span className="flow-state">IN PRACTICE</span></div>
-        <span className="art-caption">SIGNAL <i/> UNDERSTANDING <i/> OUTCOME</span>
-      </div>
+
+      <section className="hero-workflow" aria-label="Jira engineering knowledge workflow">
+        <div className="workflow-header">
+          <div className="workflow-title"><GitBranch size={18} /><span>Jira story intelligence</span></div>
+          <div className="workflow-stack">Python · FastAPI · RAG</div>
+        </div>
+        <div className="workflow-query"><span>Engineering requirement</span><strong>Find related Jira stories</strong></div>
+        <div className="workflow-route" aria-label="Search, recommend reuse, and draft a story">
+          <div className="workflow-step"><span className="workflow-step-index">01</span><Search size={16} /><strong>Search</strong><small>Related stories</small></div>
+          <span className="workflow-connector" aria-hidden="true" />
+          <div className="workflow-step"><span className="workflow-step-index">02</span><Network size={16} /><strong>Recommend</strong><small>Reuse or create</small></div>
+          <span className="workflow-connector" aria-hidden="true" />
+          <div className="workflow-step"><span className="workflow-step-index">03</span><FilePlus2 size={16} /><strong>Draft</strong><small>Jira story</small></div>
+        </div>
+        <div className="workflow-result"><span>Outcome</span><strong>Story creation with project context</strong><p>Related work and synchronized documentation stay connected.</p></div>
+      </section>
     </section>
 
-    <div className="stats" aria-label="Areas of focus">
-      <div className="stat"><div className="stat-value">95<span>%</span></div><div className="stat-label">Detection accuracy<br/>Driving test tracker</div></div>
-      <div className="stat"><div className="stat-value">10<span>+</span></div><div className="stat-label">Hours saved weekly<br/>Order automation</div></div>
-      <div className="stat"><div className="stat-value">500<span>+</span></div><div className="stat-label">Problems solved<br/>LeetCode</div></div>
+    <div className="stats" aria-label="Selected results">
+      <div className="stat"><div className="stat-value">95%</div><div className="stat-label">Detection accuracy<br />Driving test tracker</div></div>
+      <div className="stat"><div className="stat-value">10+ hrs</div><div className="stat-label">Estimated time saved weekly<br />Order processing automation</div></div>
+      <div className="stat"><div className="stat-value">500+</div><div className="stat-label">Problems solved<br />LeetCode</div></div>
     </div>
 
     <section className="section">
-      <div className="section-head"><div><div className="eyebrow">Selected work</div><h2 className="section-title">Problems worth solving.</h2></div><Link className="text-link" href="/platforms">All platform work <ArrowUpRight size={15}/></Link></div>
-      <div className="project-grid">{projects.map(p => <article className={`project-card project-${p.n}`} key={p.n}>
-        <div className="project-top"><span className="project-number">{p.n}</span><span>{p.type}</span></div><div className="project-emblem" aria-hidden="true"><span>{p.n === '01' ? '↗' : p.n === '02' ? '◎' : p.n === '03' ? '✳' : '⌘'}</span></div><h3>{p.title}</h3><p>{p.copy}</p>
+      <div className="section-head"><div><div className="eyebrow">Selected projects</div><h2 className="section-title">Software built to solve real tasks</h2></div><Link className="text-link" href="/open-source">All projects <ArrowUpRight size={16} /></Link></div>
+      <div className="project-grid">{projects.map(p => <article className="project-card" key={p.n}>
+        <div className="project-top"><span className="project-number">{p.n}</span><span>{p.type}</span></div>
+        <h3>{p.title}</h3><p>{p.copy}</p>
         <div className="tags">{p.tags.map(t => <span className="tag" key={t}>{t}</span>)}</div>
       </article>)}</div>
     </section>
 
-    <section className="section" style={{ borderTop: '1px solid var(--line)' }}>
-      <div className="split"><div><div className="eyebrow">How I work</div><h2 className="section-title">From signal to shipped software.</h2></div>
-        <div><p className="split-copy">I like working on the seams between systems: where messy data becomes a clear signal, where a promising model meets production constraints, and where thoughtful engineering makes a workflow simpler for the people using it.</p>
-          <div className="capability-list"><div className="capability"><span><Sparkles size={15}/></span>Generative &amp; agentic AI</div><div className="capability"><span><Database size={15}/></span>Data engineering</div><div className="capability"><span><Braces size={15}/></span>Backend systems</div><div className="capability"><span><Network size={15}/></span>Workflow automation</div></div>
+    <section className="section work-principles">
+      <div className="split"><div><div className="eyebrow">How I work</div><h2 className="section-title">Make complex workflows easier to use</h2></div>
+        <div><p className="split-copy">I build systems that help people find information, reduce repetitive work, and make better use of data. That means treating integration, validation, and reliability as part of the product.</p>
+          <div className="capability-list"><div className="capability"><Network size={16} />Generative and agentic AI</div><div className="capability"><Database size={16} />Data engineering</div><div className="capability"><Braces size={16} />Backend systems</div><div className="capability"><GitBranch size={16} />Workflow automation</div></div>
         </div>
       </div>
     </section>
-    <section className="section" style={{ paddingTop: 0 }}><div className="cta-panel"><div><h2>Have a worthwhile problem?</h2><p>I&apos;m always glad to talk engineering, AI, and thoughtful product work.</p></div><Link className="button-primary" href="/contact">Start a conversation <ArrowDown size={15}/></Link></div></section>
+    <section className="section cta-section"><div className="cta-panel"><div><h2>Discuss an engineering challenge</h2><p>Get in touch about AI engineering, data platforms, or product work.</p></div><Link className="button-primary" href="/contact">Contact me <ArrowRight size={16} /></Link></div></section>
   </>
 }

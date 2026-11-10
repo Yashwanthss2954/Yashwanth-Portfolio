@@ -32,17 +32,19 @@ export default function Navbar() {
   return <header className="topbar">
     <nav className="container nav" aria-label="Main navigation">
       <Link href="/" className="brand" onClick={() => setOpen(false)}>
-        <span className="brand-mark">YB</span><span>Yashwanth Bhaskaruni<span style={{ color: 'var(--lime)' }}>.</span></span>
+        <span className="brand-mark">YB</span><span>Yashwanth Bhaskaruni<span className="brand-dot">.</span></span>
       </Link>
       <div className={`nav-links${open ? ' open' : ''}`}>
         {LINKS.map(([label, href]) => <Link key={href} href={href} aria-current={pathname === href ? 'page' : undefined} onClick={() => setOpen(false)}>{label}</Link>)}
         <Link href="/contact" aria-current={pathname === '/contact' ? 'page' : undefined} onClick={() => setOpen(false)}>Contact</Link>
       </div>
-      <button className="theme-toggle" type="button" onClick={toggleTheme} aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`} title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}>
-        {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
-      </button>
-      <Link className="nav-cta" href="/contact">Let&apos;s talk <ArrowUpRight size={15} /></Link>
-      <button className="menu-toggle" type="button" aria-label={open ? 'Close navigation' : 'Open navigation'} aria-expanded={open} onClick={() => setOpen(!open)}>{open ? <X size={19} /> : <Menu size={19} />}</button>
+      <div className="nav-actions">
+        <button className="theme-toggle" type="button" onClick={toggleTheme} aria-pressed={theme === 'light'} aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`} title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}>
+          {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+        </button>
+        <Link className="nav-cta" href="/contact">Let&apos;s talk <ArrowUpRight size={16} /></Link>
+      </div>
+      <button className="menu-toggle" type="button" aria-label={open ? 'Close navigation' : 'Open navigation'} aria-expanded={open} onClick={() => setOpen(!open)}>{open ? <X size={16} /> : <Menu size={16} />}</button>
     </nav>
   </header>
 }

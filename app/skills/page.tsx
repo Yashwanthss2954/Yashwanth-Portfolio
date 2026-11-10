@@ -9,6 +9,6 @@ const groups = [
   ['Computer science', 'Data structures & algorithms, object-oriented programming, DBMS'],
 ]
 export default function Skills() { return <>
-  <header className="page-intro"><div className="eyebrow">Technical skills</div><h1>Tools for solving problems.</h1><p>Skills and technologies from my current résumé, spanning AI, backend engineering, data systems, and cloud platforms.</p></header>
+  <header className="page-intro"><div className="eyebrow">Skills</div><h1>Languages, frameworks, and tools</h1><p>Technologies across AI, backend engineering, data systems, and cloud platforms.</p></header>
   <div className="content-grid">{groups.map(([name,skills])=><section className="skill-group" key={name}><h2>{name}</h2><div className="skill-tags">{skills.split(', ').map(skill=><span className="tag" key={skill}>{skill}</span>)}</div></section>)}</div>
 </> }
