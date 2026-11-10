@@ -13,7 +13,7 @@ export default function Home() {
     <section className="hero">
       <div className="hero-copy-column">
         <div className="hero-kicker"><i />Software Development Engineer <span>·</span> AI &amp; Data Science</div>
-        <h1>I build AI and data systems for engineering teams</h1>
+        <h1>I build <span className="sage-text">AI and data systems</span> for engineering teams</h1>
         <p className="hero-copy">At Lumen Technologies, I work on engineering knowledge search, workflow automation, analytics, and data pipelines.</p>
         <div className="hero-actions">
           <Link className="button-primary" href="/platforms">View selected work <ArrowRight size={16} /></Link>
@@ -45,7 +45,7 @@ export default function Home() {
     </div>
 
     <section className="section">
-      <div className="section-head"><div><div className="eyebrow">Selected projects</div><h2 className="section-title">Software built to solve real tasks</h2></div><Link className="text-link" href="/open-source">All projects <ArrowUpRight size={16} /></Link></div>
+      <div className="section-head"><div><div className="eyebrow">Selected projects</div><h2 className="section-title">Software built to solve <span className="sage-text">real tasks</span></h2></div><Link className="text-link" href="/open-source">All projects <ArrowUpRight size={16} /></Link></div>
       <div className="project-grid">{projects.map(p => <article className="project-card" key={p.n}>
         <div className="project-top"><span className="project-number">{p.n}</span><span>{p.type}</span></div>
         <h3>{p.title}</h3><p>{p.copy}</p>
@@ -54,7 +54,7 @@ export default function Home() {
     </section>
 
     <section className="section work-principles">
-      <div className="split"><div><div className="eyebrow">How I work</div><h2 className="section-title">Make complex workflows easier to use</h2></div>
+      <div className="split"><div><div className="eyebrow">How I work</div><h2 className="section-title">Make complex workflows <span className="sage-text">easier to use</span></h2></div>
         <div><p className="split-copy">I build systems that help people find information, reduce repetitive work, and make better use of data. That means treating integration, validation, and reliability as part of the product.</p>
           <div className="capability-list"><div className="capability"><Network size={16} />Generative and agentic AI</div><div className="capability"><Database size={16} />Data engineering</div><div className="capability"><Braces size={16} />Backend systems</div><div className="capability"><GitBranch size={16} />Workflow automation</div></div>
         </div>
